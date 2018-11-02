@@ -3,7 +3,10 @@ package com.cutajarjames.exercise1
 class Distances {
 
   def allDistancesFurther(points: Array[(Int, Int)], min: Int): Seq[Double] = {
-    Seq(100.0)
+    for (i <- 0 until points.length;
+         j <- i until points.length
+         if distanceBetween(points(i), points(j)) > min)
+      yield distanceBetween(points(i), points(j))
   }
 
   private def distanceBetween(p1: (Int, Int), p2: (Int, Int)): Double = {
