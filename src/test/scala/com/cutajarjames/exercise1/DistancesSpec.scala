@@ -23,7 +23,7 @@ class DistancesSpec extends FlatSpec with Matchers {
 
   it should "output 10 distance points for 5 points" in {
     val inputs = Array((0,0), (30,40), (25,3), (78,22), (97,12))
-    (new Distances).allDistancesFurther(inputs, 10).map(math.round(_).toInt) shouldEqual Seq(50, 25, 81, 98, 37, 51, 73, 56, 73, 21)
+    (new Distances).allDistancesFurther(inputs, -1).map(math.round(_).toInt) shouldEqual Seq(50, 25, 81, 98, 37, 51, 73, 56, 73, 21)
   }
 
   it should "output 9 distance points for 5 points if one gets filtered" in {
