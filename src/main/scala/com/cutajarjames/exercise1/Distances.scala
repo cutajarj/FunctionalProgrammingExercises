@@ -4,7 +4,7 @@ class Distances {
 
   def allDistancesFurther(points: Array[(Int, Int)], min: Int): Seq[Double] = {
     for (i <- 0 until points.length;
-         j <- i until points.length
+         j <- i + 1 until points.length
          if distanceBetween(points(i), points(j)) > min)
       yield distanceBetween(points(i), points(j))
   }
