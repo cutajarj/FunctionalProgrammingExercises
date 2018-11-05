@@ -1,5 +1,18 @@
 package com.cutajarjames.exercise1
 
+/**
+  * Write a function that computes all the combinations of distances in the list of points provided
+  * and filter out any distances that have a distance longer than the min parameter.
+  *
+  * The input to the function is s list of Pairs, containing the x and y coordinates.
+  * The function should start from the first point in the list and compute the distance to all the others
+  * Then it should pick the next, and do the same, skipping any previous distances already computed.
+  *
+  * For example if the input has a list of points [a,b,c,d] it should output
+  * [distanceBetween(a,b), distanceBetween(a,c), distanceBetween(a,d),
+  *  distanceBetween(b,c), distanceBetween(b,d), distanceBetween(c,d)]
+  *
+  */
 class Distances {
 
   def allDistancesFurther(points: Array[(Int, Int)], min: Int): Seq[Double] = {
