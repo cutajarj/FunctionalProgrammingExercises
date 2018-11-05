@@ -32,7 +32,13 @@ package com.cutajarjames.exercise2
 class BoxFormatting {
 
   def boxFormat(input: String): String = {
-    ""
+    val words = input.split(" ")
+    val maxLength = words.map(_.length).max
+    val paddedWords = words
+      .map(word => word + (" " * (maxLength - word.length)))
+      .map(word => s"* $word *")
+    val startEndLine = "*" * (maxLength + 4)
+    (startEndLine +: paddedWords :+ startEndLine).mkString("\n")
   }
 
 }
