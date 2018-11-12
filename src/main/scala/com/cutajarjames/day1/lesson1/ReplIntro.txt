@@ -1,0 +1,14 @@
+scala> println("Hello")
+Hello
+
+scala> val x:Int = 123
+x: Int = 123
+
+scala> println(x+" plus one is "+ (x + 1))
+123 plus one is 124
+
+scala> val y = x + 1
+y: Int = 124
+
+scala> println(x+" plus one is "+ y)
+123 plus one is 124
