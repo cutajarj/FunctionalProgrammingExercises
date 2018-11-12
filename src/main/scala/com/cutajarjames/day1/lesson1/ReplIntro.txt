@@ -12,3 +12,5 @@ y: Int = 124
 
 scala> println(x + " plus one is " + y)
 123 plus one is 124
+
+:quit
