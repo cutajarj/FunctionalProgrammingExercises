@@ -36,5 +36,10 @@ import scala.collection.JavaConverters._
   * findAHome() returns None
   */
 class FindingHome {
-  def findAHome(): Option[String] = Some("")
+  def findAHome(): Option[String] = {
+    val props = System.getProperties.asScala
+    props.get("user.home").filter(_.trim != "")
+      .orElse(props.get("doc.home").filter(_.trim != ""))
+      .orElse(props.get("appdata.home").filter(_.trim != ""))
+  }
 }
