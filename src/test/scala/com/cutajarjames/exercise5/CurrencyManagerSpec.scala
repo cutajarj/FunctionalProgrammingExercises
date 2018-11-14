@@ -20,6 +20,15 @@ class CurrencyManagerSpec extends FlatSpec with Matchers {
     manager.convert(CurrencyAmount("USD",520.45), "DKK") shouldEqual None
   }
 
+  it should "dkk to usd should return none if rate does not exist" in {
+    val manager = new CurrencyManager(List(RateToDollar("USD", 1.0),
+      RateToDollar("EUR", 1.13),
+      RateToDollar("GBP", 1.30)))
+
+    manager.convert(CurrencyAmount("DKK",520.45), "USD") shouldEqual None
+  }
+
+
   it should "gbp to usd should work correctly" in {
     val manager = new CurrencyManager(List(RateToDollar("USD", 1.0),
       RateToDollar("EUR", 1.13),
