@@ -1,5 +1,3 @@
-import com.sun.deploy.util.StringUtils
-
 import scala.util.Try
 
 for (i <- 1 to 10; j <- 1 to 10) yield j + i
