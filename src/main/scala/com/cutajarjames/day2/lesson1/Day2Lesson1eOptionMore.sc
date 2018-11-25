@@ -11,7 +11,7 @@ priceList.get("Onion")
 
 priceList.get("Carrot")
 
-val shoppingList = List("Lettuce", "Onion", "Tomoato")
+val shoppingList = List("Lettuce", "Onion", "Tomato")
 
 shoppingList.map(item => priceList.get(item))
 
