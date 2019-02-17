@@ -11,6 +11,20 @@ This training is aimed at developers who want to learn about functional programm
 * Discover the various types of pattern matching available and utilise those learnings through the labs offered during the course.
 * See the advantages of using case classes through examples
 
+### Tips on getting this project working in intellij
+
+1. Make sure you're using a recent intellij installation
+2. Ensure you have the latest scala plugin
+3. Install the sbt plugin in intellij if it's not available
+4. Clone repo locally (you can do this using intellij)
+5. Import as an sbt project
+
+### About this project
+* You can verify your solution for an exercise by running the appropriate unit test in the same package
+* The lessons are divided in day 1 and day 2.
+* Solutions and the lessons contents can be found in the "solutions" branch 
+
+### Links to safari
 https://www.safaribooksonline.com/live-training/courses/fundamentals-of-functional-programming-with-examples-in-scala/0636920221104/
 
 https://www.safaribooksonline.com/live-training/courses/fundamentals-of-functional-programming-with-examples-in-scala/0636920230038/
