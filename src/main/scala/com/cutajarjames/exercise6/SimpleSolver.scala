@@ -17,7 +17,7 @@ case class Division(op1: Double, op2: Double) extends Expression(op1, op2)
   *
   * Examples:
   *
-  * solve(Addition(1,1) should return Some(1)
+  * solve(Addition(1,1) should return Some(2)
   * solve(Multiplication(3,2) should return Some(6)
   * solve(Division(3,0) should return None
   */
