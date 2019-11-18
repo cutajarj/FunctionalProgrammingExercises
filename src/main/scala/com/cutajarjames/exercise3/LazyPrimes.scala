@@ -10,8 +10,8 @@ package com.cutajarjames.exercise3
   *   The number 11 is a prime number because the prime numbers 2, 3 (less or equal than sqrt(11)) are not factors
   *   The number 97 is a prime number because the prime numbers 2, 3, 5 and 7 (less or equal than sqrt(97)) are not factors
   *
-  *   HINT: Think recursive streams!
+  *   HINT: Think recursive LazyList!
   */
-class StreamingPrimes {
-  val allPrimes: Stream[Int] = 2 #:: Stream.from(3)
+class LazyPrimes {
+  val allPrimes: LazyList[Int] = 2 #:: LazyList.from(3)
 }
