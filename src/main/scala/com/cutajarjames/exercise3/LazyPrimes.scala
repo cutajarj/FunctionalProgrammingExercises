@@ -13,5 +13,8 @@ package com.cutajarjames.exercise3
   *   HINT: Think recursive LazyList!
   */
 class LazyPrimes {
-  val allPrimes: LazyList[Int] = 2 #:: LazyList.from(3)
+  val allPrimes: LazyList[Int] = 2 #:: LazyList.from(3).filter { c =>
+    val primesUptoSqrt = allPrimes.takeWhile(p => p <= math.sqrt(c))
+    !primesUptoSqrt.exists(p => c % p == 0)
+  }
 }
