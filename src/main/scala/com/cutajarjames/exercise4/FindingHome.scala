@@ -1,6 +1,6 @@
 package com.cutajarjames.exercise4
 
-import scala.collection.JavaConverters._
+import scala.jdk.CollectionConverters._
 
 /**
   * Write a function that looks for a system property "user.home",

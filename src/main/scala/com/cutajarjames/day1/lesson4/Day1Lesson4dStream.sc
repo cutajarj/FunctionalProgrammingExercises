@@ -10,7 +10,7 @@ val names = list.filter { n =>
   }.take(2)
 
 
-val stream = Stream("James", "Ruth", "Isabel", "Tom", "Lucy")
+val stream = LazyList("James", "Ruth", "Isabel", "Tom", "Lucy")
 
 stream.filter { n =>
   println(s"Checking $n")

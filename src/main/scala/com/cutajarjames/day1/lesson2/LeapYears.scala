@@ -15,7 +15,7 @@ object LeapYears {
     else if (year % 400 != 0) "COMMON YEAR"
     else "LEAP YEAR"
 
-  def main(args: Array[String]) {
+  def main(args: Array[String]): Unit = {
     println(s"1904 is ${leapYearCheck(1904)} - SHOULD BE LEAP YEAR")
     println(s"1906 is ${leapYearCheck(1906)} - SHOULD BE COMMON YEAR")
     println(s"1908 is ${leapYearCheck(1980)} - SHOULD BE LEAP YEAR")
