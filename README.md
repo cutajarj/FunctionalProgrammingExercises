@@ -15,9 +15,12 @@ This training is aimed at developers who want to learn about functional programm
 
 1. Make sure you're using a recent intellij installation
 2. Ensure you have the latest scala plugin
-3. Install the sbt plugin in intellij if it's not available
-4. Clone repo locally (you can do this using intellij)
-5. Import as an sbt project
+3. Install the sbt plugin in intellij if it's not available (this is available with the latest intellij)
+4. Download the latest SBT, then go into intellij settings, Build, Execution, Deployment > Build tools > sbt and 
+   choose custom launcher and specify your downloaded source such as C:\tools\sbt-1.3.3\bin\sbt-launch.jar
+5. Clone repo locally (you can do this using intellij)
+6. Import as an sbt project
+ 
 
 ### About this project
 * You can verify your solution for an exercise by running the appropriate unit test in the same package
