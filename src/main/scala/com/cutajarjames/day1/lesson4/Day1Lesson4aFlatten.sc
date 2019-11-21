@@ -8,6 +8,8 @@ justVowels("James")
 
 val names = List("James", "Ruth", "Judith")
 
+names.map(n => justVowels(n).toList)
+
 names.flatMap(n => justVowels(n))
 
 names.map(justVowels).flatten
