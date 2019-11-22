@@ -20,7 +20,8 @@ This training is aimed at developers who want to learn about functional programm
    choose custom launcher and specify your downloaded source such as C:\tools\sbt-1.3.3\bin\sbt-launch.jar
 5. Clone repo locally (you can do this using intellij)
 6. Import as an sbt project
- 
+7. If you are still having issues try adding the scala library and scalatest manually (File > project structure > libraries)
+8. Note that this project is designed to work with the **Scala 2.13.1**, scalatest_2.13:3.0.8:jar and scalactic_2.13:3.0.8:jar 
 
 ### About this project
 * You can verify your solution for an exercise by running the appropriate unit test in the same package
