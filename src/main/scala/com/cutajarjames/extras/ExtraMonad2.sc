@@ -13,7 +13,7 @@ val optMon = new Monad[Option] {
   override def unit[A](a: => A) = Option(a)
 
   override def flatMap[A, B](fa: Option[A])(f: A => Option[B]) =
-    fa.flatMap(f)
+    fa.fold(Option.empty[B])(f)
 }
 
 val opt1 = Option("a")
@@ -24,7 +24,7 @@ val listMon = new Monad[List] {
   override def unit[A](a: => A) = List(a)
 
   override def flatMap[A, B](fa: List[A])(f: A => List[B]) =
-    fa.flatMap(f)
+    fa.foldLeft(List[B]())( (acc, x) => acc ::: f(x))
 }
 
 val list1 = List("a", "b", "c")
