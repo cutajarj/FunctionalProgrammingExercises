@@ -8,3 +8,11 @@ val opt = Option("Text")
 opt.map(_.toUpperCase).getOrElse("default")
 
 opt.fold("default")(_.toUpperCase)
+
+val tempPrev = None //Option(20), Option(20)
+val tempNew = 20 //21, 20
+//Only send if name changes
+
+tempPrev.fold(Option(tempNew))(tp => if (tp == tempNew) None else Option(tempNew))
+
+tempPrev.flatMap(tp => if (tp == tempNew) None else Option(tempNew)).orElse(Option(tempNew))
