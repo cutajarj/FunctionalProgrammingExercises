@@ -1,23 +1,31 @@
-val list1 = List("a", "b", "c")
+trait Functor[F[_]] {
+  def fmap[A, B](inst: F[A])(f: A => B): F[B]
+}
+trait Monad[F[_]] extends Functor[F] {
+  def unit[A](a: => A): F[A]
 
-val list2 = List("x", "y", "z")
+  override def fmap[A, B](inst: F[A])(f: A => B): F[B] = fltMap(inst)(a => unit(f(a)))
 
-list1.flatMap(a => list2.map(b => a + b))
+  def fltMap[A, B](inst: F[A])(f: A => F[B]): F[B]
+}
 
-val opt1 = Option("a")
-val opt2 = Option("z")
+val optMon = new Monad[Option] {
+  override def unit[A](a: => A): Option[A] = Option(a)
 
-opt1.flatMap(a => opt2.map(b => a + b))
+  override def fltMap[A, B](inst: Option[A])(f: A => Option[B]): Option[B] = inst match {
+    case Some(x) => f(x)
+    case _ => None
+  }
+}
 
-def map2[A, B, C](optA: Option[A], optB: Option[B])(f: (A, B) => C): Option[C] =
-  optA.flatMap(a => optB.map(b => f(a, b)))
+val listMon = new Monad[List] {
+  override def unit[A](a: => A): List[A] = List(a)
 
-def map2[A, B, C](listA: List[A], listB: List[B])(f: (A, B) => C): List[C] =
-  listA.flatMap(a => listB.map(b => f(a, b)))
+  override def fltMap[A, B](inst: List[A])(f: A => List[B]): List[B] = inst match {
+    case h :: t => f(h) ::: fltMap(t)(f)
+    case _ => Nil
+  }
+}
 
-map2(list1, list2)(_+_)
-map2(opt1, opt2)(_+_)
-
-//Anything that give us this wrapping (unit) and unwrapping
-//And we can now add more functions to it, like the map 2
-//Monad is a Functor, but a functor is not a Monad
+val l = List(4,2,3)
+listMon.fltMap(l)(n => ("a" * n).toList)
