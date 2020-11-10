@@ -21,7 +21,7 @@ This training is aimed at developers who want to learn about functional programm
 5. Clone repo locally (you can do this using intellij)
 6. Import as an sbt project
 7. If you are still having issues try adding the scala library and scalatest manually (File > project structure > libraries)
-8. Note that this project is designed to work with the **Scala 2.13.1**, scalatest_2.13:3.0.8:jar and scalactic_2.13:3.0.8:jar 
+8. Note that this project is designed to work with the **Scala 2.13.1**, scalatest_2.13:3.0.8:jar and scalactic_2.13:3.0.8:jar (it should work with later scala 13 versions too).
 
 ### About this project
 * You can verify your solution for an exercise by running the appropriate unit test in the same package
