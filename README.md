@@ -34,3 +34,6 @@ This training is aimed at developers who want to learn about functional programm
 https://www.safaribooksonline.com/live-training/courses/fundamentals-of-functional-programming-with-examples-in-scala/0636920221104/
 
 https://www.safaribooksonline.com/live-training/courses/fundamentals-of-functional-programming-with-examples-in-scala/0636920230038/
+
+### Great book on scala
+[Functional Programming in Scala, Second Edition, Michael Pilquist, Rúnar Bjarnason, and Paul Chiusano](https://www.manning.com/books/functional-programming-in-scala-second-edition?utm_source=cutajarj&utm_medium=affiliate&utm_campaign=book_pilquist_functional_8_17_21&a_aid=cutajarj&a_bid=d7557e7b)
