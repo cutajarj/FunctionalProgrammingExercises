@@ -2,3 +2,4 @@
 target/
 *.class
 *.log
+.bsp/
